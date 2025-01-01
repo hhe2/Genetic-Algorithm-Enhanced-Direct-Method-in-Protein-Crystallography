@@ -26,4 +26,20 @@ E. Set crystal parameters including a, b, c, alpha, beta, gamma, space group, cu
 
 When the protein structure is unknown, to perform direct phasing of the crystal, the necessary input files include: 1no4_uniq_sf.txt, 1no4_iter_sigm.txt, 1rb6_hist.txt, and crysPara.hpp.
 
+Hyperparameter Guidelines
+
+Our method's effectiveness relies primarily on the constant-density constraint of bulk solvent regions. Based on extensive testing, we recommend the following criteria for optimal results:
+
+Structure Requirements:
+- Bulk solvent content >65% (note: extensive bound water molecules can significantly reduce effective solvent content);
+- Resolution better than 2.5Å;
+- High-quality diffraction data (PDB R_work <0.25);
+- Well-defined bulk solvent region boundaries.
+
+Key Parameter Settings:
+- Initial solvent content: Set 5-8% lower than estimated (e.g., use 60% for estimated 65% content) to ensure complete protein coverage;
+- Gaussian weighting function σ: Linear decrease from 4.0 to 3.0 during iteration;
+- Grid size: Half of the diffraction resolution limit, balancing computational efficiency with density detail preservation;
+- Genetic algorithm parameters (crossover amount, fragment number, mutation rate) have been optimized across diverse structures.
+
 As direct phasing parameters, such as solvent content and reference histogram settings, may need to be adjusted and tested for different crystal structures, which requires a certain level of experience, we strongly recommend sending your experimental data to hehongxing@nbu.edu.cn. We will endeavor to adjust the parameters and solve for the phases on your behalf. Please be assured that your experimental data will not be disclosed without your explicit permission.
