@@ -1,6 +1,6 @@
 Software Overview:
 
-This software is designed for direct phasing of protein crystals, enabling the reconstruction of protein electron density directly from protein crystal diffraction data. It is referenced in the paper titled "Enhanced Direct Method in Protein Crystallography Using Parallel Genetic Algorithm," authored by Ruijiang Fu, Wu-Pei Su, and Hongxing He.
+This software is designed for direct phasing of protein crystals, enabling the reconstruction of protein electron density directly from protein crystal diffraction data. It is referenced in the paper titled "Genetic Algorithm Enhanced Direct Method in Protein Crystallography," authored by Ruijiang Fu, Wu-Pei Su, and Hongxing He.
 
 (1) Software Requirements: To compile and run the code, you will need the Intel C++ Compiler, MPI Library, and Math Kernel Library, all bundled within the Intel oneAPI HPC Toolkit.
 
